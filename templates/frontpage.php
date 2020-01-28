@@ -4,6 +4,7 @@
  <section id="search">
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
+            <br>
             <h1 class="display-4">Find a Job</h1>
             <form method="GET" action="index.php" class="form">
             <div class="form-row align-items-center">
