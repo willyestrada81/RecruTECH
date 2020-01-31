@@ -10,9 +10,9 @@ class Database{
     private $error;
     private $stmt;
 
-    public function __construct(){
+    public function __construct(){ 
         // Set DSN
-        $dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
+        $dsn = 'mysql://'.$this->$user.':'.$this->$pass.'@'.$this->$host.'/heroku_62e1d2ee359d595?reconnect=true';
 
         // Set Options
         $options = array(
