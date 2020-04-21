@@ -1,6 +1,16 @@
   <div class="container">
-    <footer class="footer mt-auto py-3">
-    <p>© MDC 2020</p>
+    <footer class="footer row justify-content-md-center py-3">
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <h6>This is the final project for class COP4834</h6>
+    </li>
+    <li class="list-group-item">
+    <small>Authors: Maday Moya, William Estrada & Carlos Palacio</small>
+    </li>
+    <li class="list-group-item">
+    <p class="">© MDC 2020</p>
+    </li>
+    </ul>
     </footer>
   </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

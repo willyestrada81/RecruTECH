@@ -1,6 +1,7 @@
 <?php include 'inc/header.php'; ?>
 
 <div class="container" id="job_listing">
+    <!-- <h4>Welcome <em><?php echo $user; ?></em></h4> -->
     <h2 class="page-header">Create a Job Listing</h2>
     <br>
     <form method="POST" action="create.php">
@@ -36,15 +37,23 @@
     </div>
     <div class="form-group">
         <label for="contact_name">Posted by</label>
-        <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Enter your name...">
+        <?php if (!empty($_SESSION['user'])){ ?>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" value="<?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>" readonly>
+        <?php } else { ?>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Enter your name...">
+        <?php }; ?>
     </div>
     <div class="form-group">
         <label for="contact_email">Contact Email</label>
-        <input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="example@example.com">
+        <?php if (!empty($_SESSION['user'])){ ?>
+            <input type="email" class="form-control" id="contact_email" name="contact_email" value="<?php echo $_SESSION['user']; ?>" readonly>
+        <?php } else { ?>
+            <input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="example@example.com">
+        <?php }; ?>
     </div>
     <br>
     <div class="form-group">
-        <input type="submit" class="btn btn-lg btn-success" value="Submit" name="submit">
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit" name="submit">
     </div>
     </form>
 </div>

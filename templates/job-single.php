@@ -1,6 +1,6 @@
 <?php include 'inc/header.php'; ?>
-<div class="container">
-    <h3 id="job_listing" class="job-title"><?php echo $job->job_title; ?></h3>
+<div class="container" id="job_listing">
+    <h3 class="job-title"><?php echo $job->job_title; ?></h3>
     <h4><em><?php echo $job->location; ?></em></h4>
     <br>
     <ul class="list-group list-group-flush">
@@ -18,7 +18,7 @@
     </ul>
     <br>
     <br>
-    <a class="btn btn-success" href="index.php">Go back...</a>
+    <a class="btn btn-primary" href="index.php">Go back...</a>
 </div>
 
 <?php include 'inc/footer.php'; ?>

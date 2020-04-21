@@ -17,7 +17,7 @@
                 </select>
             </div>
             <div class="col-auto">
-                <input type="submit" class="btn btn-lg btn-success" value="FIND">
+                <input type="submit" class="btn btn-lg btn-primary" value="FIND">
             </div>
             </div>
             </form>
@@ -35,7 +35,7 @@
                             <h3 class="job-title"><?php echo $job->job_title; ?></h3>
                         </a>
                         <p><?php echo substr($job->description, 0, 300)."..."; ?> </p>
-                        <p><a class="btn btn-secondary" href="job.php?id=<?php echo $job->id; ?>" role="button">View details »</a></p>
+                        <p><a class="btn btn-primary" href="job.php?id=<?php echo $job->id; ?>" role="button">View details »</a></p>
                     </div>
                     </div>
         <?php endforeach; ?>
