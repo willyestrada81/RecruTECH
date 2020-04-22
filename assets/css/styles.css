@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-  #job_listing {
-    margin-top: 90px;
-  }
   .marketing {
     margin-bottom: 10px;
   }
@@ -41,9 +38,12 @@
 }
 
 #alert-msg {
-  margin-top: 100px !important;
+  margin-top: 10px !important;
+}
+#alert-warning {
+  margin-top: 10px !important;
 }
 
-.my-nav {
-  margin-bottom: 10% !important;
+header {
+  padding-bottom: 80px !important;
 }

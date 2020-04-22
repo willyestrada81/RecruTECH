@@ -6,11 +6,11 @@
     <br>
     <form method="POST" action="create.php">
     <div class="form-group">
-        <label for="job_title">Job Title</label>
+        <label for="job_title">Job Title <small><em>(Required)</em></small></label>
         <input type="text" class="form-control" id="job_title" name="job_title" placeholder="Enter a job title...">
     </div>
     <div class="form-group">
-        <label for="category">Category</label>
+        <label for="category">Category <small><em>(Required)</em></small></label>
         <select name="category" class="form-control">
                     <option value=0>Choose Category...</option>
                     <?php foreach($categories as $category): ?>
@@ -20,23 +20,23 @@
         
     </div>
     <div class="form-group">
-        <label for="company">Company</label>
+        <label for="company">Company <small><em>(Required)</em></small></label>
         <input type="text" class="form-control" id="company" name="company" placeholder="Company name...">
     </div>
     <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Description <small><em>(Required)</em></small></label>
         <textarea rows="8" type="text" class="form-control" id="description" name="description" placeholder="Enter a job description or requirements..."></textarea>
     </div>
     <div class="form-group">
-        <label for="location">Location</label>
+        <label for="location">Location <small><em>(Required)</em></small></label>
         <input type="text" class="form-control" id="location" name="location" placeholder="Ex. Miami, FL 33055...">
     </div>
     <div class="form-group">
-        <label for="salary">Salary</label>
+        <label for="salary">Salary <small><em>(Required)</em></small></label>
         <input type="text" class="form-control" id="salary" name="salary" placeholder="Salary...">
     </div>
     <div class="form-group">
-        <label for="contact_name">Posted by</label>
+        <label for="contact_name">Posted by <small><em>(Required)</em></small></label>
         <?php if (!empty($_SESSION['user'])){ ?>
             <input type="text" class="form-control" id="contact_name" name="contact_name" value="<?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>" readonly>
         <?php } else { ?>
@@ -44,7 +44,7 @@
         <?php }; ?>
     </div>
     <div class="form-group">
-        <label for="contact_email">Contact Email</label>
+        <label for="contact_email">Contact Email <small><em>(Required)</em></small></label>
         <?php if (!empty($_SESSION['user'])){ ?>
             <input type="email" class="form-control" id="contact_email" name="contact_email" value="<?php echo $_SESSION['user']; ?>" readonly>
         <?php } else { ?>

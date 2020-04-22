@@ -1,7 +1,5 @@
 <?php
-    $input_errors = array();
 
-    //Redirect to page
 
     function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
         if (is_string ($page)) {
@@ -27,20 +25,6 @@
         exit;
     }
 
-    function displayErrors($erros) {
-
-        // Check for message
-
-        if ($errors != NULL) {
-            foreach ($erros as $error) {
-                // Set message
-                $_SESSION['error'] = $error;
-                echo '<div class="alert alert-warning" role="alert">' . $error .'</div>';
-            }
-        } else {
-            echo '';
-        }
-    }
 
         // Display Messages
     function displayMessage() {
@@ -78,6 +62,28 @@
             echo '';
         }
     }
+    function displayErrors() {
+            if (!empty($_SESSION)) {
+
+                foreach(array_values($_SESSION) as $values) {
+                    echo '<div class="container" id="alert-warning">';
+                        echo '<div class="row justify-content-md-center">';
+                        echo     '<div class="col col-lg-6">';
+                        echo '<div class="alert alert-warning" role="alert"><em>' . $values .'</em></div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                }
+
+        // Unset message
+        unset($_SESSION['fname_errors']);
+        unset($_SESSION['lname_errors']);
+        unset($_SESSION['email_errors']);
+        unset($_SESSION['pass_errors']);
+        } else {
+            echo '';
+        }
+    }
 
     function isLoggedIn() {
         if (!empty($_SESSION['user'])) {
@@ -94,22 +100,29 @@
         }
     }
 
+    function check_user($user_data, &$user) {
+        $result = $user->getUser($user_data);
+    
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     function validate_fname($fname) {
-        global $input_errors;
         if ($fname == "") {
-            $input_errors['fname_error'] = 'First name is required';
-            return NULL;
+            $_SESSION['fname_errors'] = 'First name is required';
         }
         else {
             return $fname;
         }
     }
-
+    
     
     function validate_lname($lname) {
         if ($lname == "") {
-            $fails['lname_error'] = 'Last name is required';
-            return NULL;
+            $_SESSION['lname_errors'] = 'Last name is required';
         } else {
             return $lname;
         }
@@ -117,13 +130,11 @@
     
     function validate_email($email) {
         if ($email == "") {
-            $fails['email_error'] = "Email is Required";
-            return NULL;
+            $_SESSION['email_errors'] = "Email is Required";
         }
         else if (!((strpos($email, ".") > 0) && (strpos($email, "@") > 0)) || preg_match("/[^a-zA-Z0-9.@_-]/", $email))
                     {
-                        $fails['email_error'] = "The Email address is invalid";
-                        return NULL;
+                        $_SESSION['email_errors'] = "The Email address is invalid";
                     }
         else {
             return $email;
@@ -131,21 +142,27 @@
     }
     
     function validate_password($password) {
-        global $input_errors;
         if ($password == "") {
-            $input_errors['password_error'] = "No Password was entered";
-            return null;
+            $_SESSION['pass_errors'] = "No Password was entered";
+    
         }
         else if (strlen($password) < 6) {
-            $input_errors['password_error'] = "Passwords must be at least 6 characters";
-            return null;
+            $_SESSION['pass_errors'] = "Passwords must be at least 6 characters";
+    
         }
         else if (!preg_match("/[a-z]/", $password) || !preg_match("/[A-Z]/", $password) || !preg_match("/[0-9]/", $password)) 
                  {
-                    $input_errors['password_error'] = "Passwords require 1 each of a-z, A-Z and 0-9";
-                    return null;
+                    $_SESSION['pass_errors'] = "Passwords require 1 each of a-z, A-Z and 0-9";
+    
                  }
         else {
             return password_hash($password, PASSWORD_DEFAULT);
+        }
+    }
+
+    function validate_job_input($field, &$error) {
+        if ($field == '') {
+            $error[] = "This field is required";
+            return null;
         }
     }

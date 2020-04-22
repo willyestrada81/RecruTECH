@@ -1,28 +1,25 @@
 <?php include 'inc/header.php'; ?>
                
 
+<?php displayErrors() ?>
 <div class="container" id="job_listing">
 <div class="row justify-content-md-center">
 <div class="col col-lg-6">
-                <?php foreach($error as $err): ?>
-                    <?php print_r($error); ?>
-                    <?php echo '<div class="alert alert-warning" role="alert">' . $err .'</div>'; ?>
-                    <?php endforeach; ?>
 <br>
     <form method="POST" action="sign_up.php">
         <img class="mb-4" src="" alt="">
         <h1 class="h3 mb-3 font-weight-normal">Create an Account</h1>
         <br>
-        <label for="user_fname">First Name</label>
+        <label for="user_fname">First Name <small><em>(Required)</em></small></label>
         <input type="text" id="user_fname" name="user_fname" class="form-control" placeholder="Ex. John" required autofocus="">
         <br>
-        <label for="user_lname">Last Name</label>
+        <label for="user_lname">Last Name <small><em>(Required)</em></small></label>
         <input type="text" id="user_lname" name="user_lname" class="form-control" placeholder="Ex. Doe" required autofocus="">
         <br>
-        <label for="user_email">Email</label>
+        <label for="user_email">Email <small><em>(Required)</em></small></label>
         <input type="email" id="user_email" name="user_email" class="form-control" placeholder="name@company.com" required autofocus="">
         <br>
-        <label for="user_password">Password</label>
+        <label for="user_password">Password <small><em>(Required)</em></small></label>
         <input type="password" id="user_password" name="user_password" class="form-control" placeholder="Password" required>
         <br>
         <label for="user_company">Company Name</label>
