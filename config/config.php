@@ -1,8 +1,8 @@
 <?php
     // DB Params
     define("DB_HOST", "localhost");
-    define("DB_USER", "root");
-    define("DB_PASS", "1234");
-    define("DB_NAME", "jobListing");
+    define("DB_USER", "williamE");
+    define("DB_PASS", "password");
+    define("DB_NAME", "job_listing");
 
     define("SITE_TITLE", "JOBBIES");
