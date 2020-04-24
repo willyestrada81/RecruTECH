@@ -11,7 +11,9 @@
     <p><?php echo $job->description; ?></p>
     <br>
     <br>
+
     <ul class="list-group list-group-flush">
+        <li class="list-group-item">Category: <?php echo $category ?></li>
         <li class="list-group-item">Company: <?php echo $job->company; ?></li>
         <li class="list-group-item">Salary: <?php echo $job->salary; ?></li>
         <li class="list-group-item">How to Apply: <?php echo $job->contact_email; ?></li>
@@ -19,6 +21,12 @@
     <br>
     <br>
     <a class="btn btn-primary" href="index.php">Go back...</a>
+
+    <?php if (isset($_SESSION['user'])) {
+        if ($_SESSION['user'] == $job->contact_email) {
+            echo '<a class="btn btn-outline-primary" name="edit" href=create.php?edit='.$job->id.'>Edit</a>';
+        }
+    }?>
 </div>
 
 <?php include 'inc/footer.php'; ?>

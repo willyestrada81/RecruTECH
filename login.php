@@ -1,8 +1,7 @@
 <?php
 
-// error_reporting(E_ALL);
-// ini_set("display_errors", 1);
-// include("file_with_errors.php");
+
+
 
 include_once 'config/init.php';
 
@@ -48,7 +47,7 @@ if (isset($_POST['submit'])) {
 
                 if ($result->isAdmin) {
 
-                    redirect('create.php', 'Successfuly logged in.', 'success');
+                    redirect('index.php', 'Successfuly logged in.', 'success');
                 } else {
                     redirect('index.php', 'Successfuly logged in.', 'success');
 

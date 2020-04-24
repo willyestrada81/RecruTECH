@@ -28,6 +28,9 @@
      <div class="container">
          <h2><?php echo $title; ?></h2>
          <br>
+         <?php if (empty($jobs)) {
+             echo '<h5>0 Jobs Found</h5>';
+         } ?>
         <?php foreach($jobs as $job): ?>
                 <div class="row marketing">
                     <div class="col-md-10">
