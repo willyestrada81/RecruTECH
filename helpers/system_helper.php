@@ -160,9 +160,17 @@
         }
     }
 
-    function validate_job_input($field, &$error) {
+    function validate_job_input($field) {
         if ($field == '') {
-            $error[] = "This field is required";
-            return null;
+            $_SESSION['add_errors'] = "Please check required fields and try again.";
+        } else {
+            return $field;
+        }
+    }
+    function validate_category($field) {
+        if ($field == 0) {
+            $_SESSION['add_errors'] = "Please check required fields and try again.";
+        } else {
+            return $field;
         }
     }
