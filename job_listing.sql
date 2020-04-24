@@ -3,6 +3,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+Database: `job_listing`
 
 
 CREATE TABLE `categories` (
@@ -32,8 +33,6 @@ CREATE TABLE `jobs` (
   `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
 INSERT INTO `jobs` (`id`, `category_id`, `company`, `job_title`, `description`, `salary`, `location`, `contact_user`, `contact_email`, `post_date`) VALUES
 (4, 4, 'Realogy', 'Real Estate Agents – License Required at Realogy', 'Coldwell Banker NRT is seeking both new and experienced real estate agents who are looking to boost their career up a notch. We offer innovative tools and programs specifically designed to help you succeed in real estate, all in support of our Core 4 Values – Production Power, Coaching to Confidence, Wealth Builder and a Culture of Awesomeness.', '100K', 'Palm Beach Gardens, FL 33418', '', '', '2020-01-26 21:01:30'),
 (5, 4, 'The Hartford ', 'Customer Service Representative', 'As a Customer Service Representative on the Group Benefits team, your primary role is to provide excellent customer service by answering customer questions about disability and leave management claims. In this role, you’ll help our customers rebuild their lives and get back to work as soon as reasonably possible after an unexpected event happens. The Hartford will provide you with 6 weeks of paid training, as well as ongoing coaching and development to ensure your success.', '8.50 hr', 'Plantation, FL', '', '', '2020-01-26 21:01:30'),
@@ -49,7 +48,6 @@ INSERT INTO `jobs` (`id`, `category_id`, `company`, `job_title`, `description`, 
 (15, 2, 'Advantage Resourcing', 'Sr. IT System Analyst', 'Full Time Permanent opportunity with a thriving Biotech firm for a Sr. IT Systems Analyst.  The qualified candidate has pharmaceutical or clinical industry background working with large Data sets (think Data Warehouse) working with Analytic/Informatic tools such as JMP, TIBCO, Tableau.\r\n\r\nNo sponsorship or H1 Visa transfer available.\r\n\r\nOur client is seeking a technical Sr. Systems Analyst, to work within R&D Applications.  This person would work closely with our Discovery, Development, and Clinical organizations to evaluate and enhance current solutions.  They will assist in optimizing data capture, data aggregation, and data analysis.  The preferred candidate will utilize their experience to implement key functionality within these groups to help facilitate the drug discovery/development/clinical process.  Their role will include but not be limited to working with the various scientific areas to identify key data sets, facilitating the implementation of required infrastructure/solution where necessary, and working closely with the scientists to create targeted templates for data analysis and other users to understand their business needs.      \r\n\r\nAll work of the Sr. Systems Analyst is conducted within regulatory guidelines and industry best practices.', '110K', 'Waltham, MA 02451', 'Carlos Palacio', 'carlos.palacio09@carlos.com', '2020-04-21 18:43:55'),
 (16, 0, '', '', '', '', '', 'Maday Moya', 'maday.moya@maday.com', '2020-04-21 22:00:08'),
 (17, 0, '', '', '', '', '', 'Maday Moya', 'maday.moya@maday.com', '2020-04-22 01:30:40');
-
 
 
 CREATE TABLE `users` (
@@ -69,7 +67,6 @@ ALTER TABLE `categories`
 ALTER TABLE `jobs`
   ADD PRIMARY KEY (`id`);
 
-
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `user_email` (`user_email`);
@@ -85,5 +82,3 @@ ALTER TABLE `jobs`
 
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
-
-
