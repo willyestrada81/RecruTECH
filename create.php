@@ -74,7 +74,7 @@ $template = new Template('templates/job_create.php');
             
             if (empty($_SESSION['add_errors'])) {
                 if ($job->update($data)) {
-                    redirect('index.php', 'Your job has been updated', 'success');
+                    redirect('job.php?id='.$data['id'], 'Your job has been updated', 'success');
                     exit();
                 } else {
                     redirect('index.php', 'Something went wrong', 'error');

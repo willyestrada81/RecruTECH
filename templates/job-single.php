@@ -1,7 +1,11 @@
 <?php include 'inc/header.php'; ?>
 <div class="container" id="job_listing">
     <h3 class="job-title"><?php echo $job->job_title; ?></h3>
-    <h4><em><?php echo $job->location; ?></em></h4>
+    <h4>
+    <svg class="bi bi-geo-alt" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+</svg>
+    <em><?php echo $job->location; ?></em></h4>
     <br>
     <ul class="list-group list-group-flush">
         <li class="list-group-item"><small><em>Posted By: <?php echo $job->contact_user; ?>, on <?php echo $job->post_date; ?></em></small>
