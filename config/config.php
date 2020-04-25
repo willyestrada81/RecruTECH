@@ -1,6 +1,8 @@
 <?php
     // DB Params
 
+    // include_once 'env.php';
+
     $DB_HOST = getenv('DATABASE_URL');
     $DB_USER = getenv('USER');
     $DB_PASS = getenv('PASS');
