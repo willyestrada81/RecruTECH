@@ -2,10 +2,10 @@
     // DB Params
 
 
-    define("DB_HOST", $_ENV["DATABASE_URL"]);
-    define("DB_USER", $_ENV["USER"]);
-    define("DB_PASS", $_ENV["PASS"]);
-    define("DB_NAME", $_ENV["DB"]);
+    define("DB_HOST", getenv("DATABASE_URL"));
+    define("DB_USER", getenv("USER"));
+    define("DB_PASS", getenv("PASS"));
+    define("DB_NAME", getenv("DB"));
 
 
     // define("DB_HOST", "us-cdbr-iron-east-01.cleardb.net");
