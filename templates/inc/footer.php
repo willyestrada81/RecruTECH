@@ -1,18 +1,24 @@
+  
+    <footer class="footer">
   <div class="container">
-    <footer class="footer row justify-content-md-center py-3">
-    <ul class="list-group list-group-flush">
+    <div class="row justify-content-md-center">
+<div class="col col-lg-6">
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">
-      <h6>This is the final project for class COP4834</h6>
+      <p class="text-muted">This is the final project for class COP4834, it is only for demostration purposes, the listings are taken from many job websites <br> and are not intended for any other purposes other than educational.<br> The emails are fake emails and will not be used or monitored.</p>
     </li>
     <li class="list-group-item">
-    <small>Authors: Maday Moya, William Estrada & Carlos Palacio</small>
+    <small class="text-muted">Authors: Maday Moya, William Estrada & Carlos Palacio</small>
     </li>
     <li class="list-group-item">
-    <p class="">© MDC 2020</p>
+    <p class=""><a href="https://www.mdc.edu/" target="blank">© MDC 2020</a></p>
     </li>
     </ul>
-    </footer>
+
   </div>
+    </div>
+</div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

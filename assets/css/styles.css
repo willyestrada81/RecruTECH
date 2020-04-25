@@ -3,13 +3,15 @@
 }
 #job_listing {
   padding-top: 120px !important;
+  position: relative;
   
 }
   .marketing {
     margin-bottom: 10px;
   }
   .footer {
-    padding-top: 15% !important;
+    margin-top: 10% !important;
+    text-align: center;
   }
 
   .jumbotron {
@@ -25,7 +27,7 @@
    justify-content: center;
 }
 .job-title {
-  color: #18BC9C;
+  color: rgb(105, 67, 176);
 }
 
 .navbar-links {
@@ -33,11 +35,13 @@
   right: 0px;
 }
 .title-link {
-  text-decoration: underline;
+  text-decoration: none;
+  transition: 200ms linear;  
 }
 .title-link:hover {
-  text-decoration: none;
-  filter: contrast(35%);
+  text-decoration: underline;
+  color: rgb(105, 67, 176);  
+  filter: opacity(90%);
 }
 
 #alert-msg {
@@ -57,4 +61,20 @@ header {
 
 .top-find {
   padding-top: 60px;
+}
+
+.btn-primary {
+  background-color: rgb(105, 67, 176) !important;
+  outline: none;
+  transition: 200ms linear;
+}
+.btn-primary:hover { 
+  filter: opacity(90%);
+  box-shadow: -3px 5px 10px 1px rgba(84, 84, 84, 0.28);
+}
+
+.apply-btn {
+position: absolute;
+right: 5%;
+top: 0%;
 }
