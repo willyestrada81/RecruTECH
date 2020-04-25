@@ -50,6 +50,7 @@
                     </div>
                     </nav>
             </header>
+
                         <?php displayMessage(); ?>
 
         

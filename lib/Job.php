@@ -119,6 +119,17 @@
                 return false;
             }
         }
+
+        public function delete($id){
+            // Insert Query
+            $this->db->query("DELETE FROM `jobs` WHERE id=$id");
+            // Execute
+            if ($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     ?>

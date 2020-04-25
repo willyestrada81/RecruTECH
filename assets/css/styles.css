@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
 }
-
+#job_listing {
+  padding-top: 120px !important;
+  
+}
   .marketing {
     margin-bottom: 10px;
   }
@@ -38,12 +41,17 @@
 }
 
 #alert-msg {
-  margin-top: 10px !important;
+  padding-top: 80px !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 #alert-warning {
   margin-top: 10px !important;
 }
 
 header {
-  padding-bottom: 80px !important;
+  /* padding-bottom: 80px !important; */
+  position: relative;
 }
