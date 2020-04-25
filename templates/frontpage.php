@@ -3,7 +3,7 @@
  <!-- Body -->
  <section id="search">
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container top-find">
             <br>
             <h1 class="display-4">Find a Job</h1>
             <form method="GET" action="index.php" class="form">

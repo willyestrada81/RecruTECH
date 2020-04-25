@@ -52,6 +52,9 @@
 }
 
 header {
-  /* padding-bottom: 80px !important; */
   position: relative;
+}
+
+.top-find {
+  padding-top: 60px;
 }
